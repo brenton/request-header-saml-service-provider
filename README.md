@@ -114,8 +114,6 @@ At this point you can either manually build the image or pull it from another lo
 Create the docker image
 ```sh
 docker build --tag=saml-auth .
-docker tag -f <id> <repo>/saml-auth
-docker push <repo>/saml-auth
 ```
 
 ### Pushing the image to the internal docker registry
