@@ -1,3 +1,4 @@
+## Assumptions
 This document assumes you already have a OpenShift environment with a working
 router and registry (the defaults are fine).  Fully operation DNS is not a
 requirement for local testing.  The goal of this document is to show how an
@@ -5,9 +6,9 @@ OpenShift environment running anywhere can integrate with a locally running
 development KeyCloak environment for test purposes.  It is by no means an
 exhuastive document on KeyCloak configuration.
 
-## Assumtions
-
-* The service provider pod in this example is `sp.example.org`
+The service provider pod in this example is `sp.example.org`.  It will only
+need to resolve on the system running the web browser that is testing the
+authentication.
 
 # install keycloak
 
