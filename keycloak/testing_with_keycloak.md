@@ -23,9 +23,15 @@ docker restart keycloak
 Browse to <ip>:8080 and click the link to access the admin console.  Create a
 new realm called 'openshift'.  Switch to this realm.
 
+### Creating the Identity Provider
 Create a new SAML 2.0 Identity Provider.  Set the `Single Sign-On Service URL`
-and `Single Logout Service URL`.  Be sure to update the hostname of the saml
+and `Single Logout Service URL`, .  Be sure to update the hostname of the saml
 service provider pod in your environment.
+
+| key | value |
+| --- |:------| 
+| Single Sign-On Service URL | https://sp.example.org/mellon/postResponse |
+| Single Logout Service URL | https://sp.example.org/mellon/logout | 
 
 ###Creating the SAML metadata
 Now create a new Client in Keycloak matching the name of your service.  On the
