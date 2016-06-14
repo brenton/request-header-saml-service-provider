@@ -113,7 +113,7 @@ At this point you can either manually build the image or pull it from another lo
 ### Manually building the docker image
 Create the docker image
 ```sh
-docker build --tag=saml-auth .
+docker build --tag=saml-service-provider .
 ```
 
 ### Pushing the image to the internal docker registry
@@ -127,7 +127,7 @@ docker login -u unused -e unused -p `oc sa get-token builder -n openshift3` 172.
 # Find the internal registry IP or use DNS. In this example 172.30.36.214 is
 # the internal registry.
 oc get services | grep docker-registry
-docker tag your.internal.registry/openshift3/saml-service-provider 172.30.36.214:5000/openshift3/saml-service-provider
+docker tag <your.local.image/saml-service-provider> 172.30.36.214:5000/openshift3/saml-service-provider
 docker push 172.30.36.214:5000/openshift3/saml-service-provider
 
 ```
