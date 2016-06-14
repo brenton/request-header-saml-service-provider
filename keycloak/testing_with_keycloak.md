@@ -10,7 +10,7 @@ The service provider pod in this example is `sp.example.org`.  It will only
 need to resolve on the system running the web browser that is testing the
 authentication.
 
-# install keycloak
+## install keycloak
 
 Install a containerized version of keycloak:
 
